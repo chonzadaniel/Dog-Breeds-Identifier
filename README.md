@@ -1,8 +1,4 @@
-# Dog-Breeds-Identifier
-Assigns a respective class name to an uploaded image in the .jpg or .jpeg extensions format.
-
 # 🐶 Dog Breed Identifier
-
 This project demonstrates how to build a robust **Transfer Learning** pipeline using **ResNet50** for classifying 120 dog breeds from the [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/). The final model achieves **~81% accuracy** on the validation set using only ~9,600 training images. The trained model is then deployed via a lightweight **Streamlit App** to perform custom image inference.
 
 ## 📌 Project Highlights
