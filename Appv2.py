@@ -1,4 +1,4 @@
-import os
+# Import Key Libraries
 from glob import glob
 from PIL import Image
 import torch
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # --------------------------- Configuration ---------------------------
 IMG_SIZE = 224
-CONF_THRESHOLD = 10.0  # Confidence threshold (%)
+CONF_THRESHOLD = 4.5 # Confidence threshold (%)
 
 # Set device
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else
