@@ -16,7 +16,7 @@ DEVICE = torch.device("mps" if torch.backends.mps.is_available() else
                       "cuda" if torch.cuda.is_available() else "cpu")
 
 # Load class names from training folder structure
-base_dir = "./data"
+base_dir  = "data"
 train_dir = os.path.join(base_dir, "train")
 train_dataset = datasets.ImageFolder(train_dir)
 class_names = [name.split('-')[-1].lower() for name in train_dataset.classes]
@@ -37,7 +37,7 @@ def load_model():
     model = models.resnet50(pretrained=False)
     num_ftrs = model.fc.in_features
     model.fc = torch.nn.Linear(num_ftrs, num_classes)
-    model.load_state_dict(torch.load("resnet50_dog_classifier_ver1.pth", map_location=DEVICE))
+    model.load_state_dict(torch.load("notebooks/resnet50_best.pth", map_location=DEVICE))
     model.to(DEVICE)
     model.eval()
     return model
