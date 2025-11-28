@@ -5,7 +5,7 @@ __pycache__/
 data/
 requirements.txt
 .DS_Store
-
+resnet50_best.pth
 # C extensions
 *.so
 
